@@ -1,0 +1,40 @@
+<?php
+/** @var \AHT\IsFeatureProduct\Block\Template $block */
+?>
+<div class="template">
+    <h1><?=$block->getTitle()?></h1>
+</div>
+<div class="block widget block-products-list grid">
+  <?php
+  // $imgUrl = $block->getProductImageUrl(2051);
+  // dd($imgUrl);
+  $baseUrl = $block->getBaseUrl();
+  $productCollection = $block->getProductCollection();
+  $dataProducts= $productCollection->addAttributeToFilter('is_feature_product',1);
+  $dataProducts = $productCollection->getItems();
+  ?>
+  <div class="products-grid grid">
+  <ol class="product-items widget-product-grid">
+  <?php foreach($dataProducts as $item): { ?>
+   
+    <div class="product-item">
+      <div class="product-item-info">
+
+        <img src="<?=$block->getProductImageUrl($item['entity_id'])?>" alt="" class="product-image-photo" width="240px" height="300px">
+        <div class="product-item-details">
+          <strong class="product-item-name" title="">
+        <a href="<?=$baseUrl?><?=$item['sku']?>.html"> <h1><?=$item['name']?></h1></a>
+          </strong>
+          <div class="price-box price-final_price">
+              <h4>Allow as
+              <b>  <span><?=$item['price']?></span></b>
+              </h4>
+            <div class="normal-price"></div>
+          </div>
+        </div>
+      </div>
+    </div> 
+  <?php } endforeach ?>
+  </ol>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="is_feature" resource="default" engine="innodb" comment="Table comment">
+        <column xsi:type="int" name="entity_id" nullable="false" identity="true" comment=""/>
+        <column xsi:type="varchar" name="name" nullable="false" default="0" comment=""/>
+         <column xsi:type="int" name="age"  nullable="false" default="0" comment=""/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="entity_id"/>
+        </constraint>
+        <constraint xsi:type="unique" referenceId="REFERENCE_ID">
+            <column name="entity_id"/>
+        
+        </constraint>
+        <!-- <index referenceId="INDEX_REFERENCE_ID" indexType="btree">
+            <column name="another_column"/>
+        </index> -->
+    </table>
+</schema>

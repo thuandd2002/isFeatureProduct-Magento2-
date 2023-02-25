@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="AHT_IsFeatureProduct::isfeatureproduct" title="Is Feature Product" module="AHT_IsFeatureProduct" sortOrder="10" resource="AHT_IsFeatureProduct::isfeatureproduct"/>
+        <add id="AHT_IsFeatureProduct::list_isfeatureproduct" title="List Product Feature " module="AHT_IsFeatureProduct" sortOrder="10" action="isfeatureproduct/product/index" resource="AHT_IsFeatureProduct::list_isfeatureproduct" parent="AHT_IsFeatureProduct::isfeatureproduct"/>
+    </menu>
+</config>
