@@ -37,7 +37,6 @@ class Index extends \Magento\Backend\App\Action
          $resultPage->setActiveMenu(static::ADMIN_RESOURCE);
          $resultPage->addBreadcrumb(__(static::PAGE_TITLE), __(static::PAGE_TITLE));
          $resultPage->getConfig()->getTitle()->prepend(__(static::PAGE_TITLE));
-     
          return $resultPage;
     }
 
